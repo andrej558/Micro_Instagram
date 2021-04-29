@@ -1,0 +1,37 @@
+
+
+
+
+<form [formGroup]="editForm" style="text-align: center;width: 50%;margin: auto;">
+
+
+    <div class="form-group">
+        <label for="PhotoId">ID</label>
+            <input type="number" class="form-control" name="id" placeholder="Enter Id" id="PhotoId" formControlName="id"/>
+        
+    </div>
+
+    <div class="form-group">
+        <label for="AlbumId">Album ID</label>
+        <input type="number" class="form-control" placeholder="Enter Album Id" id="AlbumId" formControlName="albumId"/>
+    </div>
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" placeholder="Enter Title" id="title" formControlName="title" required/>
+        <div *ngIf="editForm.get('title').errors?.required" class="alert alert-danger">Title is required</div>
+    </div>
+
+    <div class="form-group">
+        <label for="url">URL</label>
+        <input type="text" class="form-control" placeholder="Enter URL" id="url"  formControlName="url" required/>
+        <div *ngIf="editForm.get('url').errors?.required" class="alert alert-danger">URL is required</div>
+    </div>
+
+    <div class="form-group">
+        <label for="url">Thumbnail URL</label>
+        <input type="text" class="form-control" placeholder="Enter thumbnail Url" id="thumbnailUrl"  formControlName="thumbnailUrl" required/>
+        <div *ngIf="editForm.get('thumbnailUrl').errors?.required" class="alert alert-danger">Thumbnail URL is required</div>
+    </div>
+    <button class="btn btn-primary" (click)="submit()" [disabled]="!editForm.valid">Save</button>
+</form>
