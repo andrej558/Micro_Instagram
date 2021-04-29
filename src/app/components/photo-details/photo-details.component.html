@@ -1,0 +1,28 @@
+
+
+<mat-card class="mat-drawer-container" >
+    <img src="{{photo.url}}"/>
+    <mat-card-title>
+        {{photo.title}}
+      </mat-card-title>
+      <mat-card-footer>
+       <!-- <mat-card-subtitle>Id: {{photo.id}}</mat-card-subtitle>
+        <mat-card-subtitle>
+          Album Id: {{photo.albumId}}
+        </mat-card-subtitle>-->
+        <button class="btn btn-success" (click)="EditPhoto(photo.id)">Edit</button>
+        <button class="btn btn-danger" (click)="OpenDialog()">Delete</button>
+      </mat-card-footer>
+</mat-card>
+
+<!--<div class="row">
+    <div class="col-md-4">
+        <img src="{{photo.url}}" class="img-thumbnail" />
+        <p>{{photo.title}}</p>
+    </div>
+    
+</div>
+<div class="row" style="margin-left: 5px;">
+    <button class="btn btn-success" (click)="EditPhoto(photo.id)">Edit</button>
+    <button class="btn btn-danger" (click)="OpenDialog()">Delete</button>
+</div>-->
