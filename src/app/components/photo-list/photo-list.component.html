@@ -1,0 +1,19 @@
+
+
+
+
+<mat-grid-list cols="5">
+    <mat-grid-tile *ngFor="let photo of photos" style="margin-bottom: 50px">
+        <mat-card style="text-align: center;">
+            <img style="cursor: pointer;" src="{{photo.url}}" class="img-thumbnail" [routerLink]="['/details', photo.id]"/>
+            <mat-card-content>
+                <mat-card-subtitle style="font-size: 12px;">
+                    {{photo.title}}
+                </mat-card-subtitle>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+    
+</mat-grid-list>
+
+
